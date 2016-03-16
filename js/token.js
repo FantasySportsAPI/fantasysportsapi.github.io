@@ -5,7 +5,21 @@ $(document).ready(function(){
 			.toString(16)
 			.substring(1);
 		}
-        $("#token").text(s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-    s4() + '-' + s4() + s4() + s4());
+		var token = s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+    s4() + '-' + s4() + s4() + s4();
+        $("#token").text(token);
+	
+			$.ajax({
+                url: "././token/store_token.php",
+                type: "POST",
+                data: {
+                    token: token
+                },
+                cache: false,
+                success: function() {
+                },
+                error: function() {
+                },
+            })
 	});
 });
