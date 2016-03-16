@@ -1,5 +1,11 @@
 $(document).ready(function(){
     $("#genToken").click(function(){
-        $("#genToken").text("3a2993df-e8a2-11e5-9f31-0228a770e05b");
+		function s4() {
+		return Math.floor((1 + Math.random()) * 0x10000)
+			.toString(16)
+			.substring(1);
+		}
+        $("#token").text(s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+    s4() + '-' + s4() + s4() + s4());
 	});
 });
