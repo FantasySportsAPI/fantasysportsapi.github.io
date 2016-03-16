@@ -7,7 +7,7 @@ $(document).ready(function(){
 		}
 		var tokenText = s4() + s4() + '-' + s4() + '-' + s4() + '-' +
     s4() + '-' + s4() + s4() + s4();
-        $("#token").text(token);
+        $("#token").text(tokenText);
 	
 			$.ajax({
                 url: "../token/store_token.php",
