@@ -10,7 +10,7 @@ $(document).ready(function(){
         $("#token").text(token);
 	
 			$.ajax({
-                url: "././token/store_token.php",
+                url: "../token/store_token.php",
                 type: "POST",
                 data: {
                     token: token
