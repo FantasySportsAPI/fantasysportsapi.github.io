@@ -17,8 +17,10 @@ $(document).ready(function(){
                 },
                 cache: false,
                 success: function() {
+					$('#genToken').text("yes");
                 },
                 error: function() {
+					$('#genToken').text("no");
                 },
             })
 	});

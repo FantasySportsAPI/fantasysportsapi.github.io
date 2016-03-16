@@ -12,9 +12,9 @@ if ($conn->connect_error) {
 } 
 
 $token = $_POST['token'];
+$date = date('Y-m-d H:i:s');
 
-$sql = "INSERT INTO AuthToken (Token, Date)
-VALUES ($token, date("Y-m-d H:i:s"))";
+$sql = "INSERT INTO `AuthToken` (`Token`, `Date`) VALUES ('$token', '$date')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
