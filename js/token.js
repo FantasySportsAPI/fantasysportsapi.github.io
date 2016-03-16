@@ -5,21 +5,23 @@ $(document).ready(function(){
 			.toString(16)
 			.substring(1);
 		}
-		var token = s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+		var tokenText = s4() + s4() + '-' + s4() + '-' + s4() + '-' +
     s4() + '-' + s4() + s4() + s4();
         $("#token").text(token);
 	
 			$.ajax({
                 url: "../token/store_token.php",
                 type: "POST",
-                data: token,
+                data: {
+                    token:tokenText
+                },
                 cache: false,
                 success: function() {
 					$('#genToken').text("yes");
                 },
                 error: function() {
 					$('#genToken').text("no");
-                },
+                }
             })
 	});
 });
