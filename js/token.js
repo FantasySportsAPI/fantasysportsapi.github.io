@@ -15,13 +15,7 @@ $(document).ready(function(){
                 data: {
                     token:tokenText
                 },
-                cache: false,
-                success: function() {
-					$('#genToken').text("yes");
-                },
-                error: function() {
-					$('#genToken').text("no");
-                }
+                cache: false
             })
 	});
 });
