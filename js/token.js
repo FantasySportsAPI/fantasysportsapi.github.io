@@ -12,9 +12,7 @@ $(document).ready(function(){
 			$.ajax({
                 url: "../token/store_token.php",
                 type: "POST",
-                data: {
-                    token: token
-                },
+                data: token,
                 cache: false,
                 success: function() {
 					$('#genToken').text("yes");
